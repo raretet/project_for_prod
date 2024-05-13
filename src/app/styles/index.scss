@@ -2,12 +2,11 @@
 @import 'variables/global';
 @import './themes/light';
 @import './themes/dark';
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+@import 'https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap';
 
 .app {
     font: var(--font-m);
     background: var(--bg-color);
     color: var(--primary-color);
-
     min-height: 100vh;
 }

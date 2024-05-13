@@ -40,8 +40,22 @@ export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[]  {
         use: 'ts-loader',
         exclude: /node_modules/,
     }
+
+    const babelLoader = {
+        test: /\.(?:js|mjs|cjs)$/,
+      exclude: /node_modules/,
+      use: {
+        loader: 'babel-loader',
+        options: {
+          presets: [
+            ['@babel/preset-env', { targets: "defaults" }]
+          ]
+        }
+      }
+    }
     
     return [
+        babelLoader,
         svgLoader,
         fileLoader,
         typescriptLoader,
