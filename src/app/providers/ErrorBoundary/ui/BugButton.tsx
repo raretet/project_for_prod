@@ -1,4 +1,4 @@
-import { Button } from 'shared/ui/Button/Button'
+import { Button, ThemeButton } from 'shared/ui/Button/Button'
 import { useEffect, useState } from 'react'
 
 // Component for testing ErrorBoundary
@@ -15,5 +15,9 @@ export const BugButton = () => {
     }
   }, [error])
 
-  return <Button onClick={throwError}>throw error</Button>
+  return (
+    <Button onClick={throwError} theme={ThemeButton.BACKGROUND_INVERTED}>
+      throw error
+    </Button>
+  )
 }
