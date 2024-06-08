@@ -5,7 +5,6 @@ export function buildCssLoader(isDev: boolean) {
     test: /\.s[ac]ss$/i,
     use: [
       isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
-      'sass-loader',
       {
         loader: 'css-loader',
         options: {
@@ -14,7 +13,8 @@ export function buildCssLoader(isDev: boolean) {
             localIdentName: isDev ? '[path][name]__[local]' : '[hash:base64:8]'
           }
         }
-      }
+      },
+      'sass-loader'
     ]
   }
 }
