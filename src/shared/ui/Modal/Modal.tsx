@@ -8,7 +8,6 @@ import React, {
   useState
 } from 'react'
 import { Portal } from 'widgets/Portal/Portal'
-import { useTheme } from 'app/providers/ThemeProvider'
 
 interface ModalProps {
   className?: string
@@ -20,7 +19,6 @@ interface ModalProps {
 export const Modal = ({ className, children, isOpen, onClose }: ModalProps) => {
   const [isClosing, setIsClosing] = useState(false)
   const timerRef = useRef<ReturnType<typeof setTimeout>>()
-  const { theme } = useTheme()
 
   const closeHandler = useCallback(() => {
     if (onClose) {
@@ -58,8 +56,7 @@ export const Modal = ({ className, children, isOpen, onClose }: ModalProps) => {
 
   const mods: Record<string, boolean> = {
     [s.opened]: isOpen,
-    [s.isClosing]: isClosing,
-    [s[theme]]: true
+    [s.isClosing]: isClosing
   }
 
   return (

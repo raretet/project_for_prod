@@ -5,13 +5,13 @@
 @import 'https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap';
 
 body {
+    font: var(--font-m);
     color: var(--primary-color);
-    min-height: 100vh;
 }
 
 .app {
     background: var(--bg-color);
-    font: var(--font-m);
+    min-height: 100vh;
 }
 
 
