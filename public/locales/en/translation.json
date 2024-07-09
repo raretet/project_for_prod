@@ -10,5 +10,7 @@
   "О нас": "About",
   "Войти": "Sing in",
   "Имя Пользователя": "Username",
-  "Пароль": "Password"
+  "Пароль": "Password",
+  "Форма авторизации": "Auth form",
+  "Неверный логин или пароль!": "Wrong password or username!"
 }
